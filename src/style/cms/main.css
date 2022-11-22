@@ -1,0 +1,194 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/*@import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,500;0,700;1,300&display=swap");
+ */
+.none {
+  display: none !important;
+}
+
+#manageNav {
+  height: 60px;
+  width: 100vw;
+  background: linear-gradient(to top, #ccc, #fff);
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  padding-inline: 50px;
+}
+#manageNav .manBtn {
+  all: unset;
+  padding: 5px 8px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  margin-left: auto;
+  color: #fff;
+  transition: all 150ms ease-out;
+}
+#manageNav .manBtn:hover {
+  filter: brightness(1.1);
+}
+#manageNav .user {
+  background-image: linear-gradient(to bottom, #f5ff12, #dee928, #c8d334, #b3bd3b, #9fa83f);
+  color: #000;
+}
+#manageNav .login {
+  background-image: linear-gradient(to bottom, #2ad831, #4abf20, #56a713, #5a900d, #587a0c);
+}
+#manageNav .article {
+  background-image: linear-gradient(to bottom, #2ad831, #4abf20, #56a713, #5a900d, #587a0c);
+  margin-inline: 0 auto;
+}
+
+.manageArea {
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(25, 24, 24, 0.7);
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  position: fixed;
+  z-index: 99;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.manageArea .popArea {
+  width: 50vw;
+  height: 75vh;
+  min-height: 800px;
+  padding: 50px;
+  border: 1px solid #fff;
+  background-color: rgba(255, 255, 255, 0.8);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+.manageArea .popArea .cmsInput {
+  width: 70%;
+  padding: 15px 20px;
+  font-size: 1.2rem;
+}
+.manageArea .popArea textarea {
+  resize: none;
+}
+.manageArea .popArea label {
+  margin: 40px 10px 20px;
+  width: 75%;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+.manageArea .popArea .cmsBtn {
+  all: unset;
+  padding: 5px 10px;
+  background-image: linear-gradient(to bottom, #2ad831, #4abf20, #56a713, #5a900d, #587a0c);
+  border-radius: 5px;
+  cursor: pointer;
+  border: 1px solid #000;
+  box-shadow: 0 0 5px #ccc;
+  align-self: flex-end;
+  margin: 30px;
+  color: #fff;
+}
+.manageArea .popArea .cmsBtn:hover {
+  filter: brightness(1.2);
+}
+.manageArea .popArea .fa-xmark {
+  align-self: flex-end;
+  cursor: pointer;
+  margin: 20px 0 0;
+}
+.manageArea .popArea .articleEdit {
+  background-image: linear-gradient(to bottom, #f5ff12, #dee928, #c8d334, #b3bd3b, #9fa83f);
+  color: #000;
+}
+
+#manageItemArea {
+  width: 80vw;
+  height: auto;
+  padding: 50px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(141, 141, 143, 0.8);
+  -webkit-backdrop-filter: blur(20px);
+          backdrop-filter: blur(20px);
+  margin: 50px auto;
+}
+#manageItemArea .articleItem {
+  height: 200px;
+  width: 80%;
+  background-color: #fff;
+  border: 1px solid #999;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding-left: 50px;
+  gap: 5%;
+  margin-bottom: 20px;
+}
+#manageItemArea .articleItem img {
+  max-height: 80%;
+  max-width: 20%;
+}
+#manageItemArea .articleItem p {
+  font-size: 0.9rem;
+  flex: 2 1 60%;
+  height: 90%;
+  overflow: scroll;
+}
+#manageItemArea .articleItem p span {
+  color: #000;
+  display: block;
+  font-size: 1.2rem;
+}
+#manageItemArea .articleItem .infoArea {
+  flex: 1 1 150px;
+  border-left: 3px solid #ccc;
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  padding: 10px 20px;
+  line-height: 2rem;
+  margin-left: auto;
+}
+#manageItemArea .articleItem .infoArea .manBtns {
+  height: 30px;
+  padding: 0px 8px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  transition: all 200ms;
+}
+#manageItemArea .articleItem .infoArea .manBtns:hover {
+  filter: brightness(1.1);
+}
+#manageItemArea .articleItem .infoArea .edItem {
+  background-image: linear-gradient(to bottom, #f5ff12, #dee928, #c8d334, #b3bd3b, #9fa83f);
+  color: #000;
+  margin-top: auto;
+}
+#manageItemArea .articleItem .infoArea .delItem {
+  background-image: linear-gradient(to bottom, #ff6412, #e25a25, #c5512e, #a64a34, #874336);
+  color: #fff;
+  margin-top: 10px;
+}
+
+#ManageContainer {
+  all: unset;
+  height: 100vh;
+  width: 100vw;
+  background-image: linear-gradient(to left top, #191a1c, #0e223e, #002860, #002b82, #0e28a1);
+  z-index: -1;
+  position: fixed;
+  overflow: scroll;
+}/*# sourceMappingURL=main.css.map */

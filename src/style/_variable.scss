@@ -1,0 +1,16 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;500&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Raleway", sans-serif;
+}
+
+$primary-color: #1d9ae2;
+$secondary-color: #f9733e;
+$text-color: #fff;
+$border-Radius: 0 15px;
+
+@function trans($item: all, $time: 300ms) {
+  @return $item $time ease;
+}

@@ -1,0 +1,21 @@
+@import "./variable";
+@import "./Nav";
+@import "./PopUp";
+@import "./SingleItem";
+
+#ManageContainer {
+  all: unset;
+  height: 100vh;
+  width: 100vw;
+  background-image: linear-gradient(
+    to left top,
+    #191a1c,
+    #0e223e,
+    #002860,
+    #002b82,
+    #0e28a1
+  );
+  z-index: -1;
+  position: fixed;
+  overflow: scroll;
+}

@@ -1,0 +1,132 @@
+$PreviewColor: #fff;
+
+.blog {
+  height: auto;
+  width: 80vw;
+  padding: 50px;
+  margin: 50px auto 200px;
+  border-radius: 0 20px;
+  background-color: rgb(255 255 255 / 0.6);
+  backdrop-filter: blur(10px);
+  line-height: 1.9rem;
+  color: $text-color;
+  user-select: none;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 5%;
+
+  &-preView {
+    flex: 1 1 35%;
+    height: 200px;
+    margin-top: 50px;
+    box-shadow: 0 0 10px #ccc;
+    border-bottom: 3px solid transparent;
+    overflow: hidden;
+    transition: trans(all) !important;
+    position: relative;
+    color: #888;
+    background-color: $PreviewColor;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-around;
+    padding: 10px;
+    align-items: center;
+
+    .preImg {
+      height: 80%;
+      flex-basis: 30%;
+      min-width: 200px;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      border: 5px solid $PreviewColor;
+      box-shadow: 0 0 0 1px #ccc;
+      box-sizing: border-box;
+    }
+
+    .preInfo {
+      flex-basis: 65%;
+      height: 90%;
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: flex-start;
+
+      span {
+        display: block;
+        font-size: 1.2rem;
+        font-weight: 600;
+        line-height: 1.9rem;
+      }
+
+      p {
+        margin-top: 10px;
+        line-height: 1.4rem;
+      }
+
+      .preDetail {
+        height: 20px;
+        width: 100%;
+        margin-top: auto;
+        padding: 15px 5px;
+        display: flex;
+        border-top: 1px solid #ccc;
+        align-items: center;
+        position: relative;
+
+        .readMore {
+          all: unset;
+          cursor: pointer;
+          color: $secondary-color;
+          font-size: 0.8rem;
+          position: absolute;
+          right: 0;
+          top: -30px;
+
+          &::before {
+            content: "\f0fe  ";
+            font-size: 0.8rem;
+            font-family: "Font Awesome 5 Free";
+          }
+        }
+
+        span[class*="preDetail"] {
+          color: #ccc;
+          font-size: 0.9rem;
+          margin-left: 10px;
+          font-family: "Franklin Gothic Medium", "Arial Narrow", Arial,
+            sans-serif;
+
+          &:first-of-type::before {
+            content: "\f406  ";
+            font-family: "Font Awesome 5 Free";
+          }
+
+          &:nth-of-type(2) {
+            margin-left: auto;
+            cursor: pointer;
+            transition: trans();
+
+            &:before {
+              content: "\f164  ";
+              font-family: "Font Awesome 5 Free";
+            }
+
+            &:hover {
+              color: $primary-color;
+            }
+          }
+        }
+      }
+    }
+
+    &:hover {
+      border-color: $secondary-color;
+      color: #222;
+    }
+    &:hover .preImg {
+      filter: brightness(1.1);
+    }
+  }
+}

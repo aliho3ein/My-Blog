@@ -1,0 +1,72 @@
+.darkBack {
+}
+
+.manageArea {
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(25, 24, 24, 0.7);
+  backdrop-filter: blur(5px);
+  position: fixed;
+  z-index: 99;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .popArea {
+    width: 50vw;
+    height: 75vh;
+    min-height: 800px;
+    padding: 50px;
+    border: 1px solid #fff;
+    background-color: rgb(255 255 255 / 0.8);
+    backdrop-filter: blur(10px);
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+
+    .cmsInput {
+      width: 70%;
+      padding: 15px 20px;
+      font-size: 1.2rem;
+    }
+    textarea {
+      resize: none;
+    }
+
+    label {
+      margin: 40px 10px 20px;
+      width: 75%;
+      user-select: none;
+    }
+
+    .cmsBtn {
+      all: unset;
+      padding: 5px 10px;
+      background-image: $Btn-green;
+      border-radius: 5px;
+      cursor: pointer;
+      border: 1px solid #000;
+      box-shadow: 0 0 5px #ccc;
+      align-self: flex-end;
+      margin: 30px;
+      color: #fff;
+
+      &:hover {
+        filter: brightness(1.2);
+      }
+    }
+
+    .fa-xmark {
+      align-self: flex-end;
+      cursor: pointer;
+      margin: 20px 0 0;
+    }
+
+    .articleEdit {
+      background-image: $Btn-yellow;
+      color: #000;
+    }
+  }
+}

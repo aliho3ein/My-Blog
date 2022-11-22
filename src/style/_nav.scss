@@ -1,0 +1,147 @@
+nav {
+  height: 50px;
+  width: 50px;
+  border-radius: 50px;
+  position: fixed;
+  z-index: 99;
+  background: rgb(0 0 0 /0.6);
+  backdrop-filter: blur(20px);
+  left: 50px;
+  top: 50px;
+  cursor: pointer;
+  box-shadow: 0 0 10px #999;
+
+  .navLine {
+    height: 0px;
+    width: 10px;
+    background: rgb(0 0 0 /0.4);
+    backdrop-filter: blur(20px);
+    position: absolute;
+    top: 47px;
+    left: 21px;
+    border-radius: 10px;
+    list-style-type: none;
+    transition: trans(all, 100ms);
+    overflow: hidden;
+    transition-delay: 200ms;
+
+    /* menu Items */
+    a {
+      visibility: hidden;
+      color: transparent;
+      text-decoration: none;
+    }
+
+    a.navItem {
+      background: rgb(0 0 0 /0.4);
+      backdrop-filter: blur(20px);
+      font-size: 1.6rem;
+      padding: 6px 10px;
+      color: #fff;
+      letter-spacing: 5px;
+      // -webkit-text-stroke: 1px #eee;
+      position: absolute;
+      cursor: pointer;
+      transition: trans(all, 500ms);
+      left: 15px;
+      border-radius: 0 5px 5px 0;
+      visibility: visible;
+
+      &:first-child {
+        top: 20px;
+      }
+
+      @for $i from 2 to 5 {
+        &:nth-child(#{$i}) {
+          top: ($i * 60px) - 40px;
+          transition-delay: $i * 50ms;
+        }
+      }
+    }
+
+    /* connection to line nd li */
+    a:after {
+      content: "";
+      position: absolute;
+      height: 5px;
+      width: 10px;
+      left: -6px;
+      top: 18px;
+      background-color: #ccc;
+      border-radius: 0 5px 5px 0;
+    }
+
+    /* Hover effect */
+    a.navItem:before {
+      content: attr(data-con);
+      width: 0px;
+      border-right: 3px solid $secondary-color;
+      position: absolute;
+      color: $secondary-color;
+      transition: trans(all, 600ms);
+      overflow: hidden;
+    }
+
+    a.navItem:hover::before {
+      width: 90%;
+    }
+  }
+
+  .activeLine {
+    height: 280px;
+    overflow: visible;
+  }
+
+  /* Burgers */
+  .burger,
+  .burger:before,
+  .burger:after {
+    height: 4px;
+    width: 25px;
+    position: absolute;
+    top: 23px;
+    right: 12px;
+    background-color: $secondary-color;
+    border-radius: 5px;
+    content: "";
+    transition: trans(all, 500ms);
+  }
+  .burger:after {
+    top: 9px;
+    right: 0;
+  }
+  .burger:before {
+    top: -9px;
+    right: 0;
+  }
+
+  .navOpen,
+  .navOpen:after,
+  .navOpen:before {
+    height: 4px;
+    width: 25px;
+    position: absolute;
+    top: 23px;
+    right: 12px;
+    background-color: $secondary-color;
+    border-radius: 5px;
+    content: "";
+    transition: trans();
+  }
+  .navOpen {
+    transform: rotate(-90deg);
+  }
+
+  .navOpen:after {
+    transform: rotate(40deg);
+    width: 15px;
+    right: 12px;
+    top: 4px;
+  }
+  .navOpen:before {
+    transform: rotate(-40deg);
+    width: 15px;
+    right: 12px;
+    top: -4px;
+  }
+}

@@ -1,0 +1,39 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/*@import url("https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,500;0,700;1,300&display=swap");
+ */
+
+$Btn-green: linear-gradient(
+  to bottom,
+  #2ad831,
+  #4abf20,
+  #56a713,
+  #5a900d,
+  #587a0c
+);
+
+$Btn-yellow: linear-gradient(
+  to bottom,
+  #f5ff12,
+  #dee928,
+  #c8d334,
+  #b3bd3b,
+  #9fa83f
+);
+
+$Btn-red: linear-gradient(
+  to bottom,
+  #ff6412,
+  #e25a25,
+  #c5512e,
+  #a64a34,
+  #874336
+);
+
+.none {
+  display: none !important;
+}

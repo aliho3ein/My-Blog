@@ -1,0 +1,79 @@
+#manageItemArea {
+  width: 80vw;
+  height: auto;
+  padding: 50px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(141, 141, 143, 0.8);
+  backdrop-filter: blur(20px);
+  margin: 50px auto;
+
+  .articleItem {
+    height: 200px;
+    width: 80%;
+    background-color: #fff;
+    border: 1px solid #999;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-left: 50px;
+    gap: 5%;
+    margin-bottom: 20px;
+    // overflow: scroll;
+
+    img {
+      max-height: 80%;
+      max-width: 20%;
+    }
+
+    p {
+      font-size: 0.9rem;
+      flex: 2 1 60%;
+      height: 90%;
+      overflow: scroll;
+
+      span {
+        color: #000;
+        display: block;
+        font-size: 1.2rem;
+      }
+    }
+
+    .infoArea {
+      flex: 1 1 150px;
+      border-left: 3px solid #ccc;
+      height: 90%;
+      display: flex;
+      flex-direction: column;
+      padding: 10px 20px;
+      line-height: 2rem;
+      margin-left: auto;
+
+      .manBtns {
+        height: 30px;
+        padding: 0px 8px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+        cursor: pointer;
+        transition: all 200ms;
+
+        &:hover {
+          filter: brightness(1.1);
+        }
+      }
+
+      .edItem {
+        background-image: $Btn-yellow;
+        color: #000;
+        margin-top: auto;
+      }
+
+      .delItem {
+        background-image: $Btn-red;
+        color: #fff;
+        margin-top: 10px;
+      }
+    }
+  }
+}

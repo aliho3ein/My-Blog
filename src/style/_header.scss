@@ -1,0 +1,45 @@
+header {
+  position: relative;
+  height: 100vh;
+  width: 100vw;
+  overflow: hidden;
+
+  .coverHead {
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    background: linear-gradient(
+      to top,
+      rgb(255 255 255 / 1),
+      transparent,
+      transparent
+    );
+  }
+
+  #headBackImage {
+    height: 100vh;
+    width: 100vw;
+    background: center / cover url(./../../public/image/bc.jpg) no-repeat;
+    position: absolute;
+  }
+
+  .ml4 {
+    position: absolute;
+    z-index: 3;
+    width: 100%;
+    text-align: center;
+    font-weight: 900;
+    font-size: 4.5em;
+    top: 30%;
+    color: $secondary-color;
+    user-select: none;
+  }
+  .ml4 .letters {
+    position: absolute;
+    margin: auto;
+    left: 0;
+    top: 0.3em;
+    right: 0;
+    opacity: 1;
+  }
+}

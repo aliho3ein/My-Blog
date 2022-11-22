@@ -1,0 +1,38 @@
+#manageNav {
+  height: 60px;
+  width: 100vw;
+  background: linear-gradient(to top, #ccc, #fff);
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  padding-inline: 50px;
+
+  .manBtn {
+    all: unset;
+    padding: 5px 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    margin-left: auto;
+    color: #fff;
+    transition: all 150ms ease-out;
+
+    &:hover {
+      filter: brightness(1.1);
+    }
+  }
+
+  .user {
+    background-image: $Btn-yellow;
+    color: #000;
+  }
+
+  .login {
+    background-image: $Btn-green;
+  }
+
+  .article {
+    background-image: $Btn-green;
+    margin-inline: 0 auto;
+  }
+}

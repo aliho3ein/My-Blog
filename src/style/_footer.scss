@@ -1,0 +1,76 @@
+#myFooter {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  align-items: flex-end;
+  user-select: none;
+
+  > div {
+    width: 30%;
+    height: 270px;
+    color: #999;
+    padding: 20px;
+    position: relative;
+  }
+
+  .footerAbout {
+    span {
+      font-size: 2rem;
+
+      &:before {
+        content: "";
+        height: 25px;
+        aspect-ratio: 1;
+        border-radius: 50%;
+        background: rgba($primary-color, 0.5);
+        position: absolute;
+        transform: translate(-10px, -3px);
+      }
+
+      &:after {
+        content: "";
+        height: 10px;
+        aspect-ratio: 1;
+        border-radius: 50%;
+        background: rgba($secondary-color, 0.5);
+        position: absolute;
+        transform: translate(10px, 20px);
+        left: 0;
+      }
+    }
+    p {
+      padding: 10px;
+      line-height: 1.6rem;
+    }
+  }
+
+  .footerMap {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    span {
+      position: absolute;
+      bottom: 20px;
+      color: #ccc;
+    }
+  }
+
+  .footerContact {
+    display: flex;
+    flex-direction: column;
+    font-size: 2rem;
+    align-items: flex-end;
+
+    a {
+      line-height: 3rem;
+      text-decoration: none;
+      cursor: pointer;
+      color: #999;
+      transition: trans();
+
+      &:hover {
+        color: $primary-color;
+      }
+    }
+  }
+}
