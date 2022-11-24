@@ -13,11 +13,13 @@ function SingleItem() {
     view: 0,
     like: 0,
     img: "",
+    modify: "",
   });
 
   useEffect(() => {
     instance.get(`/articleList/${Key}.json`).then((response) => {
       setArticle(response.data);
+      console.log(response.data);
     });
   }, []);
 
@@ -49,6 +51,7 @@ function SingleItem() {
       <p>{article.description}</p>
       <div className="detailItem">
         <span title="View"> {article.view}</span>
+        <span title="Modify Date"> {article.modify}</span>
         <span title="Like" onClick={likeItem}>
           {article.like}
         </span>

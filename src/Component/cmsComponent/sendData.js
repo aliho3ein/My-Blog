@@ -19,10 +19,10 @@ function SendData() {
       ></textarea>
       <label htmlFor="cmsImg">Image Link</label>
       <input id="cmsImg" className="cmsInput img" type="text" />
-      <button className="cmsBtn" id="articlePost">
+      {/*<button className="cmsBtn" id="articlePost">
         Post
       </button>
-      {/* <button className="cmsBtn" id="articleEdit">
+       <button className="cmsBtn" id="articleEdit">
       Edit
     </button> */}
     </div>

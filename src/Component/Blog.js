@@ -9,7 +9,7 @@ import BlogContext from "../Context/BlogContext";
 
 function Blog() {
   let Context = useContext(BlogContext);
-  let { title, description, img, view, like, key } = Context.items;
+  let { title, description, img, view, like, key, modify } = Context.items;
 
   /* Fade Effect Side */
   let side;
@@ -20,7 +20,7 @@ function Blog() {
 
   /* ReadMore and Like */
   let more = (type, key) => {
-    type === "like" ? like++ : view++;
+    type === "like" ? ++like : ++view;
 
     let newItem = {
       description,
@@ -28,7 +28,9 @@ function Blog() {
       title,
       like,
       view,
+      modify,
     };
+
     instance.put(`articleList/${key}.json`, newItem).then(() => {
       newItem.key = key;
       Context.despatch({
@@ -54,6 +56,9 @@ function Blog() {
         <div className="preDetail">
           <span className="preDetail-view" title="View">
             {view}
+          </span>
+          <span className="preDetail-view" title="Modify Time">
+            {modify}
           </span>
           <span
             className="preDetail-like"

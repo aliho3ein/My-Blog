@@ -1,0 +1,86 @@
+/* Blog */
+@media (max-width: 1500px) {
+  .blog-preView {
+    flex-basis: 40%;
+    min-width: 350px;
+    height: 400px;
+    display: flex;
+    flex-flow: column nowrap;
+
+    .preImg {
+      width: 90%;
+      flex-basis: 50%;
+      margin: 10px 0;
+    }
+
+    .preInfo {
+      flex-basis: 65%;
+      width: 95%;
+      display: flex;
+
+      > span {
+        display: block;
+        font-size: 1.2rem;
+        font-weight: 600;
+        line-height: 1.9rem;
+        text-align: center;
+      }
+
+      p {
+        margin-top: 10px;
+        line-height: 1.4rem;
+        padding: 10px;
+      }
+    }
+  }
+}
+
+/* Footer */
+@media (max-width: 950px) {
+  #myFooter {
+    grid-template: 200px 1fr 1fr / 100%;
+    justify-items: center;
+    grid-template-areas: "." "social" "about";
+
+    .footerMap {
+      display: none;
+    }
+
+    .footerContact {
+      flex-direction: row;
+      gap: 20px;
+    }
+
+    .copyArea {
+      display: none;
+    }
+  }
+
+  #myAbout {
+    display: none;
+  }
+}
+
+/* Single Item */
+@media (max-width: 550px) {
+  .singleItem {
+    width: 100%;
+
+    p {
+      font-size: 1rem;
+    }
+
+    h2 {
+      font-size: 1.2rem;
+    }
+    .headItem {
+      width: 100%;
+      border-radius: 50%;
+    }
+
+    .detailItem {
+      flex-direction: column;
+      gap: 20px;
+    }
+  }
+}

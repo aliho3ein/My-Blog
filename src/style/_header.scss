@@ -19,7 +19,7 @@ header {
   #headBackImage {
     height: 100vh;
     width: 100vw;
-    background: center / cover url(./../../public/image/bc.jpg) no-repeat;
+    background: center / cover url(./../../public/image/bc-head.jpg) no-repeat;
     position: absolute;
   }
 
@@ -31,7 +31,6 @@ header {
     font-weight: 900;
     font-size: 4.5em;
     top: 30%;
-    color: $secondary-color;
     user-select: none;
   }
   .ml4 .letters {
@@ -41,5 +40,20 @@ header {
     top: 0.3em;
     right: 0;
     opacity: 1;
+
+    text-shadow: 10px 10px 50px #000;
+
+    background-image: linear-gradient(
+      to top,
+      #f9733e,
+      #fd8b38,
+      #ffa234,
+      #fdb935,
+      #f9d03e
+    );
+    background-clip: text;
+    color: transparent;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
   }
 }

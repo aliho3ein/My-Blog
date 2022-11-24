@@ -8,6 +8,8 @@ function Article(props) {
 
   return (
     <div className="articleItem">
+      <span className="dateArea">{item.modify}</span>
+
       <img src={item.img} alt={item.title} />
       <p>
         <span>{item.title}</span>
@@ -16,6 +18,7 @@ function Article(props) {
       <div className="infoArea">
         <span>View : {item.view}</span>
         <span>Like : {item.like}</span>
+
         <button className="edItem manBtns" onClick={() => manage("edit")}>
           Edit
         </button>

@@ -20,7 +20,16 @@
     padding-left: 50px;
     gap: 5%;
     margin-bottom: 20px;
+    position: relative;
     // overflow: scroll;
+
+    .dateArea {
+      position: absolute;
+      padding: 2px 5px;
+      top: -10px;
+      left: 5px;
+      background-color: #999;
+    }
 
     img {
       max-height: 80%;

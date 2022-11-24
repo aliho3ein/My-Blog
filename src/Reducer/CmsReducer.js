@@ -11,10 +11,21 @@ function cmsReducer(state, despatch) {
       return { ...state, article: newItem };
     case "editItem":
       let editItem = state.article.filter((item) => item.key !== key);
-      return { ...state, article: [...editItem, newItem] };
+      let updateArticle = [...editItem, newItem];
+      return { ...state, article: updateArticle.sort(compare) };
     default:
       return { ...state, article: newItem };
   }
 }
 
 export default cmsReducer;
+
+function compare(a, b) {
+  if (a.key < b.key) {
+    return -1;
+  }
+  if (a.key > b.key) {
+    return 1;
+  }
+  return 0;
+}

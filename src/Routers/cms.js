@@ -8,8 +8,8 @@ import CMSContext from "./../Context/CmsContext";
 import List from "../Component/cmsComponent/listArticle";
 /* Api */
 import instance from "../Api/BlogApi";
-
-let View, Like, Key;
+/* Variable */
+let View, Like, Key, Modify;
 
 function CMS() {
   /* Reducer */
@@ -63,7 +63,6 @@ function CMS() {
         .then((response) => {
           let name = response.data.name;
           newItem = { ...newItem, key: name };
-          console.log(newItem);
           despatch({ type: "addItem", payload: { newItem } });
           toggleArea();
           console.log("Data is Successfully posted");
@@ -150,13 +149,14 @@ function getThisData(key) {
   instance
     .get(`/articleList/${key}.json`)
     .then((response) => {
-      let { title, description, img, like, view } = response.data;
+      let { title, description, img, like, view, modify } = response.data;
       document.getElementById("title").value = title;
       document.getElementById("des").value = description;
       document.getElementById("cmsImg").value = img;
       Like = like;
       View = view;
       Key = key;
+      Modify = modify;
     })
     .catch((er) => console.warn("Error by getting Data for edit"));
 }
@@ -166,6 +166,7 @@ function getDataFromManager(type) {
   if (type === "init") {
     View = 0;
     Like = 0;
+    Modify = new Date().toDateString();
   }
 
   let newItem = {
@@ -174,6 +175,7 @@ function getDataFromManager(type) {
     img: document.getElementById("cmsImg").value,
     view: View,
     like: Like,
+    modify: Modify,
   };
 
   return newItem;

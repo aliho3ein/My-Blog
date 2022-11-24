@@ -8,37 +8,38 @@ function FooterArea() {
           commodi cumque corporis aperiam rerum accusantium non sequi natus,
           voluptatibus earum hic dolore repellendus fugit temporibus repudiandae
           excepturi facilis? Qui, ipsum nulla inventore aspernatur nisi cumque
-          voluptatem sint error est vel voluptas Eligendi.
+          excepturi facilis? Qui, ipsum nulla inventore aspernatur nisi cumque
+          voluptatem sint error est vel voluptas Eligendi. excepturi facilis?
+          Qui, ipsum nulla inventore aspernatur nisi cumque
         </p>
       </div>
-      <div className="footerMap">
-        <span>copyright 2022 &copy; aliho3ei</span>
-      </div>
+      <div className="footerMap"></div>
+      <span className="copyArea">copyright 2022 &copy; aliho3ei</span>
       <div className="footerContact">
         <a
           href="https://github.com/aliho3ein"
-          rel="noopener"
+          rel="noreferrer"
           target="_blank"
           title="Github"
-          class="fa-brands fa-square-github"
+          className="fa-brands fa-square-github"
         ></a>
         <a
           href="https://de.linkedin.com/"
           target="_blank"
           title="Linkedin"
-          class="fa-brands fa-linkedin"
+          className="fa-brands fa-linkedin"
         ></a>
         <a
           href="https://twitter.com/?lang=de"
           target="_blank"
           title="Twitter"
-          class="fa-brands fa-square-twitter"
+          className="fa-brands fa-square-twitter"
         ></a>
         <a
           href="https://www.instagram.com/aliho3.ein/?hl=de"
           target="_blank"
           title="Instagram"
-          class="fa-brands fa-instagram"
+          className="fa-brands fa-instagram"
         ></a>
       </div>
     </footer>
