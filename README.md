@@ -4,6 +4,7 @@ Article Blog with an CMS
 
 - admin can create Article
 - Like and View Counter
+- My work
 
 ---
 
@@ -21,4 +22,4 @@ Article Blog with an CMS
 
 ---
 
-Live [Version](https://637fccdd3f0ba661101920e5--earnest-yeot-03c7a0.netlify.app/)
+Live [Version](https://earnest-yeot-03c7a0.netlify.app/)
