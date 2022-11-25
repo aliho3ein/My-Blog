@@ -201,9 +201,9 @@ nav .navLine {
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   position: absolute;
-  top: 47px;
+  top: 49px;
   left: 21px;
-  border-radius: 10px;
+  border-radius: 0 0 10px 10px;
   list-style-type: none;
   transition: all 100ms ease;
   overflow: hidden;
@@ -268,7 +268,7 @@ nav .navLine a.navItem:before {
   border-right: 3px solid #f9733e;
   position: absolute;
   color: #f9733e;
-  transition: all 600ms ease;
+  transition: width 600ms ease;
   overflow: hidden;
 }
 nav .navLine a.navItem:hover::before {

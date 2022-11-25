@@ -7,7 +7,6 @@ nav {
   background: rgb(0 0 0 /0.6);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
-
   left: 50px;
   top: 50px;
   cursor: pointer;
@@ -19,11 +18,10 @@ nav {
     background: rgb(0 0 0 /0.4);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
-
     position: absolute;
-    top: 47px;
+    top: 49px;
     left: 21px;
-    border-radius: 10px;
+    border-radius: 0 0 10px 10px;
     list-style-type: none;
     transition: trans(all, 100ms);
     overflow: hidden;
@@ -83,7 +81,7 @@ nav {
       border-right: 3px solid $secondary-color;
       position: absolute;
       color: $secondary-color;
-      transition: trans(all, 600ms);
+      transition: trans(width, 600ms);
       overflow: hidden;
     }
 
