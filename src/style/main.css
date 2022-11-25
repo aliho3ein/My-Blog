@@ -55,6 +55,8 @@
   border: 5px solid #fff;
   box-shadow: 0 0 0 1px #ccc;
   box-sizing: border-box;
+  filter: grayscale(40%);
+  transition: all 300ms ease;
 }
 .blog-preView .preInfo {
   flex-basis: 65%;
@@ -128,7 +130,7 @@
   color: #222;
 }
 .blog-preView:hover .preImg {
-  filter: brightness(1.1);
+  filter: grayscale(0%);
 }
 
 header {
@@ -184,8 +186,8 @@ nav {
   position: fixed;
   z-index: 99;
   background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
-          backdrop-filter: blur(20px);
   left: 50px;
   top: 50px;
   cursor: pointer;
@@ -196,8 +198,8 @@ nav .navLine {
   height: 0px;
   width: 10px;
   background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
-          backdrop-filter: blur(20px);
   position: absolute;
   top: 47px;
   left: 21px;
@@ -216,34 +218,39 @@ nav .navLine a {
   text-decoration: none;
 }
 nav .navLine a.navItem {
-  background: rgba(0, 0, 0, 0.4);
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
-          backdrop-filter: blur(20px);
-  font-size: 1.6rem;
+  font-size: 1.4rem;
   padding: 6px 10px;
   color: #fff;
   letter-spacing: 5px;
   position: absolute;
   cursor: pointer;
-  transition: all 500ms ease;
+  transition: all 200ms ease;
   left: 15px;
   border-radius: 0 5px 5px 0;
   visibility: visible;
+  text-transform: uppercase;
 }
 nav .navLine a.navItem:first-child {
   top: 20px;
 }
 nav .navLine a.navItem:nth-child(2) {
   top: 80px;
-  transition-delay: 100ms;
+  transition-delay: 160ms;
 }
 nav .navLine a.navItem:nth-child(3) {
   top: 140px;
-  transition-delay: 150ms;
+  transition-delay: 240ms;
 }
 nav .navLine a.navItem:nth-child(4) {
   top: 200px;
-  transition-delay: 200ms;
+  transition-delay: 320ms;
+}
+nav .navLine a.navItem:nth-child(5) {
+  top: 260px;
+  transition-delay: 400ms;
 }
 nav .navLine a:after {
   content: "";
@@ -268,7 +275,7 @@ nav .navLine a.navItem:hover::before {
   width: 90%;
 }
 nav .activeLine {
-  height: 280px;
+  height: 320px;
   overflow: visible;
 }
 nav .burger,
@@ -333,6 +340,7 @@ nav .navOpen:before {
       -ms-user-select: none;
           user-select: none;
   padding-inline: 2%;
+  margin-top: 200px;
 }
 #myFooter > div {
   color: #999;
@@ -518,7 +526,7 @@ nav .navOpen:before {
     padding: 10px;
   }
 }
-/* Footer */
+/* Footer About Work */
 @media (max-width: 950px) {
   #myFooter {
     grid-template: 200px 1fr 1fr/100%;
@@ -537,6 +545,16 @@ nav .navOpen:before {
   }
   #myAbout {
     display: none;
+  }
+  #myWork {
+    height: auto;
+    width: 90%;
+    flex-flow: column wrap;
+  }
+  #myWork .work {
+    width: 90%;
+    max-width: 400px;
+    aspect-ratio: 1;
   }
 }
 /* Single Item */
@@ -559,15 +577,89 @@ nav .navOpen:before {
     gap: 20px;
   }
 }
+#myWork {
+  height: auto;
+  width: 80%;
+  padding-block: 50px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-self: center;
+  gap: 5%;
+  margin: 0 auto 50px;
+}
+
+.work {
+  width: 40%;
+  max-width: 400px;
+  aspect-ratio: 1;
+  margin-top: 30px;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  flex-flow: row wrap;
+  align-items: center;
+  padding: 20px;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+.work:hover .work-img {
+  background-size: 150%;
+  filter: grayscale(0%);
+}
+.work-img {
+  height: 80%;
+  width: 95%;
+  background-position: center;
+  background-size: 100%;
+  border: 3px solid #ccc;
+  transition: all 2s cubic-bezier(0.65, 0.05, 0.36, 1);
+  filter: grayscale(80%);
+  box-shadow: 0 0 15px #222;
+}
+.work a {
+  color: #ccc;
+  text-decoration: none;
+  font-size: 1.4rem;
+  margin-right: auto;
+  transition: all 300ms ease;
+}
+.work a:hover {
+  color: #1d9ae2;
+}
+.work a:after {
+  content: "    \f35d";
+  vertical-align: top;
+  font: var(--fa-font-solid);
+  font-size: 0.8rem;
+}
+.work .work-view {
+  color: #eee;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+.work .work-view::before {
+  content: "\f007  ";
+  font: var(--fa-font-solid);
+}
+
 html {
   scroll-behavior: smooth;
+}
+
+body {
+  width: 100vw;
+  overflow-x: hidden;
 }
 
 main {
   width: 100vw;
   min-height: 100vh;
   padding: 50px 0;
-  background: center/cover url(./../../public/image/patternpad.svg);
+  background: top/contain url(./../../public/image/patternpad02.svg);
 }
 
 .freeArea {

@@ -56,7 +56,7 @@
 
     span {
       font-size: 1.5rem;
-      font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+      font-family: $numberFont;
       color: #aaa;
 
       &:first-of-type {

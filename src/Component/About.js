@@ -3,42 +3,41 @@ function AboutArea() {
     <div id="myAbout" className="freeArea">
       <h2>Welcome to my Blog</h2>
       <p>
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nemo obcaecati
-        recusandae rem aliquam, cumque ab alias iusto optio officia, et sint
-        asperiores fuga eius explicabo suscipit assumenda dolorem accusantium
-        molestiae! Voluptate ad sint nihil eveniet, sit magnam animi, aspernatur
-        perferendis libero consectetur corporis, saepe ut quia est. Soluta eius
-        voluptatibus ad quisquam modi nulla quo illo ut velit, officiis cumque
-        assumenda rem facilis, consectetur, adipisci iusto officia consequuntur
-        quasi. Officiis.
+        I am an experienced joiner with well developed skills and experience in
+        groundwork, concrete finishing and steel fixing and have worked in the
+        construction industry since 2019. I am also a skilled labourer who has
+        supported many different trades over the years. I have a full clean DE
+        driving license with entitlement of under to 3.5 tonne. I am keen to
+        return to work after a period of training and personal development which
+        has broadened my skills and experiences.
       </p>
       <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti
-        obcaecati nemo eius sed libero laborum odit, maxime aspernatur id
-        incidunt provident quo vel voluptate? Quo doloribus fuga suscipit quidem
-        voluptatum deserunt magnam recusandae, inventore, molestiae quibusdam
-        voluptatem adipisci enim? Eligendi ratione obcaecati quibusdam veniam
-        expedita dolor accusamus. Esse modi quo numquam non dolorem. Laboriosam
-        quos similique eum dolor id suscipit aut quis unde iusto. Asperiores
-        enim, dolor officia, adipisci similique perspiciatis tempora, quia
-        tenetur praesentium voluptas labore illo minima consectetur ipsum
-        voluptatibus accusantium! Odit voluptatem quisquam minima fuga dolorem
-        consectetur ab voluptatibus incidunt iste corrupti odio mollitia,
-        dolorum nam officiis ipsam ratione eius quibusdam pariatur corporis,
-        quidem voluptates maiores ducimus distinctio reiciendis. Dolore, nemo.
-        Nihil iste nam saepe eveniet error nobis animi quod impedit voluptatum
-        nesciunt fugiat reiciendis magni debitis facere expedita voluptates,
-        quaerat excepturi asperiores corrupti iure ut. Facere excepturi
-        quibusdam temporibus officiis consequatur delectus obcaecati suscipit
-        quam voluptates?
+        I am a good communicator with proven inter personal skills and am used
+        to working in a team whilst also being capable of using own initiative.
+        I am skilled In dealing with problems in a resourceful manner and
+        negotiating to achieve beneficial agreement. I am always enthusiastic to
+        learn and undertake new challenges.
       </p>
       <p>
-        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Tempora
-        commodi beatae provident consectetur debitis quibusdam nobis voluptatem
-        explicabo hic eveniet. Eum quaerat quas corrupti tempore fugiat sit
-        reiciendis quisquam, harum non amet ea perferendis aspernatur labore, a,
-        laborum dignissimos voluptatum itaque qui error odio enim veniam? Libero
-        non ea aliquam!
+        I am a hard working, honest individual. I am a good timekeeper, always
+        willing to learn new skills. I am friendly, helpful and polite, have a
+        good sense of humour. I am able to work independently in busy
+        environments and also within a team setting. I am outgoing and tactful,
+        and able to listen effectively when solving problems.
+      </p>
+      <p>
+        I am a punctual and motivated individual who is able to work in a busy
+        environment and produce high standards of work. I am an excellent team
+        worker and am able to take instructions from all levels and build up
+        good working relationships with all colleagues. I am flexible, reliable
+        and possess excellent time keeping skills.
+      </p>
+      <p>
+        {" "}
+        I work well in a team but also on my own as I like to set myself goals
+        which I will achieve, I have good listening and communication skills. I
+        have a creative mind and am always up for new challenges. I am well
+        organized and always plan ahead to make sure I manage my time well
       </p>
     </div>
   );

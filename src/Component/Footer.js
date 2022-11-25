@@ -4,13 +4,16 @@ function FooterArea() {
       <div className="footerAbout">
         <span>über mich</span>
         <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem
-          commodi cumque corporis aperiam rerum accusantium non sequi natus,
-          voluptatibus earum hic dolore repellendus fugit temporibus repudiandae
-          excepturi facilis? Qui, ipsum nulla inventore aspernatur nisi cumque
-          excepturi facilis? Qui, ipsum nulla inventore aspernatur nisi cumque
-          voluptatem sint error est vel voluptas Eligendi. excepturi facilis?
-          Qui, ipsum nulla inventore aspernatur nisi cumque
+          I am a hard working, honest individual. I am a good timekeeper, always
+          willing to learn new skills. I am friendly, helpful and polite, have a
+          good sense of humour. I am able to work independently in busy
+          environments and also within a team setting. I am outgoing and
+          tactful, and able to listen effectively when solving problems. I am a
+          punctual and motivated individual who is able to work in a busy
+          environment and produce high standards of work. I am an excellent team
+          worker and am able to take instructions from all levels and build up
+          good working relationships with all colleagues. I am flexible,
+          reliable and possess excellent time keeping skills.
         </p>
       </div>
       <div className="footerMap"></div>

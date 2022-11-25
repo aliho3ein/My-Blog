@@ -19,7 +19,6 @@ function SingleItem() {
   useEffect(() => {
     instance.get(`/articleList/${Key}.json`).then((response) => {
       setArticle(response.data);
-      console.log(response.data);
     });
   }, []);
 

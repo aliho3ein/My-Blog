@@ -1,12 +1,24 @@
-import React from "react";
+import React, { useEffect } from "react";
 /* anime.js Text Effect  */
 import anime from "animejs/lib/anime.es.js";
 /* Component Nav */
 import MainNav from "./Nav";
+/*  */
+import { useRef } from "react";
 
 function MainHeader() {
+  const headerStart = useRef(null);
+
+  useEffect(() => {
+    headerStart.current.addEventListener(
+      "click",
+      textEffect(),
+      bcImageEffect()
+    );
+  }, []);
+
   return (
-    <header id="myHeader">
+    <header ref={headerStart} id="myHeader">
       <MainNav />
       <div id="headBackImage"></div>
       <div className="coverHead"></div>
@@ -21,10 +33,10 @@ function MainHeader() {
 
 export default MainHeader;
 
-window.addEventListener("DOMContentLoaded", () => {
-  textEffect();
-  bcImageEffect();
-});
+// window.addEventListener("DOMContentLoaded", () => {
+//   textEffect();
+//   bcImageEffect();
+// });
 
 function textEffect() {
   var ml4 = {};

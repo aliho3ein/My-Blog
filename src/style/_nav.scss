@@ -6,6 +6,8 @@ nav {
   z-index: 99;
   background: rgb(0 0 0 /0.6);
   backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+
   left: 50px;
   top: 50px;
   cursor: pointer;
@@ -16,6 +18,8 @@ nav {
     width: 10px;
     background: rgb(0 0 0 /0.4);
     backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+
     position: absolute;
     top: 47px;
     left: 21px;
@@ -33,28 +37,29 @@ nav {
     }
 
     a.navItem {
-      background: rgb(0 0 0 /0.4);
+      background: rgb(0 0 0 /0.6);
       backdrop-filter: blur(20px);
-      font-size: 1.6rem;
+      -webkit-backdrop-filter: blur(20px);
+      font-size: 1.4rem;
       padding: 6px 10px;
       color: #fff;
       letter-spacing: 5px;
-      // -webkit-text-stroke: 1px #eee;
       position: absolute;
       cursor: pointer;
-      transition: trans(all, 500ms);
+      transition: trans(all, 200ms);
       left: 15px;
       border-radius: 0 5px 5px 0;
       visibility: visible;
+      text-transform: uppercase;
 
       &:first-child {
         top: 20px;
       }
 
-      @for $i from 2 to 5 {
+      @for $i from 2 to 6 {
         &:nth-child(#{$i}) {
           top: ($i * 60px) - 40px;
-          transition-delay: $i * 50ms;
+          transition-delay: $i * 80ms;
         }
       }
     }
@@ -88,7 +93,7 @@ nav {
   }
 
   .activeLine {
-    height: 280px;
+    height: 320px;
     overflow: visible;
   }
 

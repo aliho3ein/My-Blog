@@ -35,7 +35,7 @@
   }
 }
 
-/* Footer */
+/* Footer About Work */
 @media (max-width: 950px) {
   #myFooter {
     grid-template: 200px 1fr 1fr / 100%;
@@ -58,6 +58,18 @@
 
   #myAbout {
     display: none;
+  }
+
+  #myWork {
+    height: auto;
+    width: 90%;
+    flex-flow: column wrap;
+
+    .work {
+      width: 90%;
+      max-width: 400px;
+      aspect-ratio: 1;
+    }
   }
 }
 

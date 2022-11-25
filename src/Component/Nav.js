@@ -1,6 +1,14 @@
+import { useEffect, useRef } from "react";
+
 function MainNav() {
+  const navEffect = useRef(null);
+
+  useEffect(() => {
+    navEffect.current.addEventListener("click", toggleNav);
+  }, []);
+
   return (
-    <nav className="navigation">
+    <nav className="navigation" ref={navEffect}>
       <span className="btnBurg burger"></span>
       <div className="navLine">
         <a className="nav-item" href="#myHeader" data-con="&nbsp;Home">
@@ -12,6 +20,9 @@ function MainNav() {
         <a className="nav-item" href="#myAbout" data-con="&nbsp;About">
           &nbsp;About
         </a>
+        <a className="nav-item" href="#myWork" data-con="&nbsp;Work">
+          &nbsp;Work
+        </a>
         <a className="nav-item" href="#myFooter" data-con="&nbsp;Social">
           &nbsp;Social
         </a>
@@ -22,21 +33,16 @@ function MainNav() {
 
 export default MainNav;
 
-window.addEventListener("DOMContentLoaded", () => {
-  Navigation();
-});
-
-function Navigation() {
+/* Nav Effect */
+function toggleNav() {
   let burger = document.querySelector(".btnBurg");
   let navLine = document.querySelector(".navLine");
   let navItem = document.querySelectorAll("a.nav-item");
 
-  document.querySelector(".navigation").addEventListener("click", () => {
-    burger.classList.toggle("navOpen");
-    burger.classList.toggle("burger");
-    navLine.classList.toggle("activeLine");
-    navItem.forEach((item) => {
-      item.classList.toggle("navItem");
-    });
+  burger.classList.toggle("navOpen");
+  burger.classList.toggle("burger");
+  navLine.classList.toggle("activeLine");
+  navItem.forEach((item) => {
+    item.classList.toggle("navItem");
   });
 }

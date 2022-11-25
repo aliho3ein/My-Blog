@@ -15,6 +15,7 @@ import MainArea from "./../Component/MainArea";
 import FooterArea from "./../Component/Footer";
 import AboutArea from "./../Component/About";
 import SingleItem from "../Component/singleItem";
+import MyWork from "../Component/MyWork";
 
 function Home() {
   const [state, despatch] = useReducer(BlogRed, {
@@ -29,6 +30,7 @@ function Home() {
         <main id="myBlog">
           {state.thisItem === "" ? <MainArea /> : <SingleItem />}
           <AboutArea />
+          <MyWork />
         </main>
       </BlogContext.Provider>
       <FooterArea />

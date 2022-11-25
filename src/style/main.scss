@@ -5,16 +5,22 @@
 @import "./footer";
 @import "./singleArticle";
 @import "./responsive";
+@import "./MyWork";
 
 html {
   scroll-behavior: smooth;
+}
+
+body {
+  width: 100vw;
+  overflow-x: hidden;
 }
 
 main {
   width: 100vw;
   min-height: 100vh;
   padding: 50px 0;
-  background: center / cover url(./../../public/image/patternpad.svg);
+  background: top / contain url(./../../public/image/patternpad02.svg);
 }
 
 .freeArea {

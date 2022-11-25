@@ -45,6 +45,8 @@ $PreviewColor: #fff;
       border: 5px solid $PreviewColor;
       box-shadow: 0 0 0 1px #ccc;
       box-sizing: border-box;
+      filter: grayscale(40%);
+      transition: trans();
     }
 
     .preInfo {
@@ -98,8 +100,7 @@ $PreviewColor: #fff;
           color: #ccc;
           font-size: 0.9rem;
           margin-left: 10px;
-          font-family: "Franklin Gothic Medium", "Arial Narrow", Arial,
-            sans-serif;
+          font-family: $numberFont;
 
           &:first-of-type::before {
             content: "\f406  ";
@@ -128,7 +129,7 @@ $PreviewColor: #fff;
       color: #222;
     }
     &:hover .preImg {
-      filter: brightness(1.1);
+      filter: grayscale(0%);
     }
   }
 }
