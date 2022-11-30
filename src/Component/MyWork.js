@@ -51,8 +51,14 @@ export default function MyWork() {
       link: "https://main--aufgaben-list.netlify.app/",
       view: 158,
     },
+    {
+      id: 8,
+      title: "Pizzaria",
+      img: "https://sunika.co.za/images/South_Africas_top_selling_take-away_foods_in_2021.jpg",
+      link: "https://pizzaria-de.netlify.app/",
+      view: 308,
+    },
   ];
-  //
 
   let allWork = works.map((item, index) => {
     return <SingleWork key={index} value={item} />;

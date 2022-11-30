@@ -33,11 +33,6 @@ function MainHeader() {
 
 export default MainHeader;
 
-// window.addEventListener("DOMContentLoaded", () => {
-//   textEffect();
-//   bcImageEffect();
-// });
-
 function textEffect() {
   var ml4 = {};
   ml4.opacityIn = [0, 1];

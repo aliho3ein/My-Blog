@@ -22,4 +22,4 @@ Article Blog with an CMS
 
 ---
 
-Live [Version](https://earnest-yeot-03c7a0.netlify.app/)
+Live [Version](https://my-blog-de.netlify.app/)
