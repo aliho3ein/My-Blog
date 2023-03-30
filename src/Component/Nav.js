@@ -23,7 +23,7 @@ function MainNav() {
         <a className="nav-item" href="#myWork" data-con="&nbsp;Work">
           &nbsp;Work
         </a>
-        <a className="nav-item" href="#myFooter" data-con="&nbsp;Social">
+        <a className="nav-item" href="/cms" data-con="&nbsp;Social">
           &nbsp;Social
         </a>
       </div>

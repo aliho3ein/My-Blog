@@ -8,7 +8,7 @@ function App() {
   return (
     <Routes>
       <Route path="/" element={<Home />} />
-      <Route path="cms" element={<CMS />} />
+      <Route path="/cms" element={<CMS />} />
     </Routes>
   );
 }
